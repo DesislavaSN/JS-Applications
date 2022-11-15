@@ -11,7 +11,6 @@ export function showCreate(){
 
 async function createMovie(event){
     event.preventDefault();
-
     const formData = new FormData(form);
     const title = formData.get('title');
 
@@ -28,10 +27,7 @@ async function createMovie(event){
             const err = await res.json();
             throw new Error(err.message);
         }
-        /* tyk dannite koito poluchavame ne ni interesyvat, a napravo 
-        redirektvame kum kataloga! i za tova ne pishem: const data = await res.json();*/ 
         showCatalog();
-
     } catch (error) {
         alert(error.message);
     }
