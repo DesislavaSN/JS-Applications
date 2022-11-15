@@ -39,9 +39,7 @@ async function onLogin(event){
             email: data.email,
         };
         sessionStorage.setItem('userData', JSON.stringify(userData));
-        // console.log('token: ', userData.accessToken );
-        /* redirectva kum stranicata koqto iskame, vikame si opredeleneta function-a i 
-        q importvame v tova view, sushto taka raboti i za proverka na user-a*/ 
+        
         checkUserNav();
         showHome();
     } catch (error) {
