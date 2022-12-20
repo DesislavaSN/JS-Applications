@@ -32,18 +32,13 @@ async function request(url, method = 'get', data){
             alert(err.message);
             throw new Error(err.message);
         }
-
-        // tova vrushta Promise i drygite koito vikat f. request shte go AWAIT-nat !!!
         return response.json();
     } catch (error) {
         alert(error.message);
         throw new Error(error.message);
-    }
-    
+    }  
 }
 
-/*suzdavame si f. za vsqka zaqvka i gi export-irame za da gi polzvame 
-v module-ite kato tam gi awaitvame za da polychim data-ta ot servera*/ 
 export async function getBooks(){
     return request('/books');
 };
