@@ -10,8 +10,6 @@ export async function showDetails(context, id){
     context.showSection(section);
     
     const user = JSON.parse(localStorage.getItem('user'));
-    /*isOwner proverqva (vrushta true or false) dali id-to na 
-    user-a e == na idea._ownerId i ako e - vizyalizirame DELETE btn.* */ 
     const isOwner = user && user._id == idea._ownerId;
     section.innerHTML = createIdeaSection(idea, isOwner);
     if (isOwner) {
@@ -27,7 +25,6 @@ export async function showDetails(context, id){
 
 }
 
-// f. koqto suzdava html sectiona za detailite na edna idea:
 function createIdeaSection(idea, isOwner){
     let html = `
     <img class="det-img" src=${idea.img} />
