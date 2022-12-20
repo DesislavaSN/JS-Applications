@@ -1,6 +1,5 @@
 import { get, post } from './api.js';
 
-/* URL's kum koito trqbva da pravim zaqvki */
 const endpoint = {
     'login': '/users/login',
     'register': '/users/register',
