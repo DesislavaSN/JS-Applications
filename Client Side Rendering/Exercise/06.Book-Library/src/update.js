@@ -3,7 +3,6 @@
 
 import { html, updateBook } from './utility.js';
 
-/* tyk onSuccess e callback f.*/
 const updateTemplate = (book, ctx) => html `
 <form @submit=${ev => onSubmit(ev, ctx)} id="edit-form">
     <input type="hidden" name="id" .value=${book._id}>
